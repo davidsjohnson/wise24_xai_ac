@@ -11,7 +11,11 @@ def evaluate_model(model, dataloader, criterion, device):
     preds = []
     probs = []
     with torch.no_grad():  # Disable gradient calculation
-        for inputs, labels, idxs in dataloader:
+        for data in dataloader:
+            if len(data) == 3:
+                inputs, labels, _ = data
+            else:
+                inputs, labels = data
             inputs, labels = inputs.to(device), labels.to(device)
 
             # Forward pass

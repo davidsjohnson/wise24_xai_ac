@@ -1,6 +1,7 @@
 import torch
 import torch.nn as nn
 import torch.nn.functional as F
+from torchvision import models
 
 class ResNetBlock(nn.Module):
     def __init__(self, in_ch, out_ch, stride):
@@ -47,3 +48,18 @@ class ResNet(nn.Module):
         x = torch.flatten(x, 1)
         x = self.dropout(x)
         return self.fc(x)
+    
+
+class ResNet18(nn.Module):
+
+    def __init__(self, n_classes, pretrained):
+        super(ResNet18, self).__init__()
+
+        self._pretrained = pretrained
+        resnet_kwargs = {}
+        self.model = models.resnet18(models.ResNet18_Weights.DEFAULT if pretrained else None, **resnet_kwargs)
+        n_feats = self.model.fc.in_features
+        self.model.fc = nn.Linear(in_features=n_feats, out_features=n_classes)
+
+    def forward(self, x):
+        return self.model(x)
