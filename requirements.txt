@@ -1,0 +1,14 @@
+jupyterlab
+jupyter
+matplotlib
+numpy<2
+pandas
+scikit-learn
+seaborn
+scikit-image
+xgboost
+librosa
+torch
+torchvision
+requests
+opensmile
