@@ -3,7 +3,15 @@
 
 In this seminar we will learn about the latest research in eXplainable AI (XAI) and its application for the field of affective computing.  This reposity will contain a series of [Jupyter Notebooks](https://jupyter.org/) to give you practical experience in implementing state-of-the-art explainablity techniques using various Python packages.
 
-## Installation Instructions
+These notebooks have been designed to be run via Google Colab or locally.  Google Colab's free usage should be suffiecient to run the notebooks.  
+
+## Colab Instrustions
+
+- Click the "Open in Colab" button at the top of the notebook
+- Click "Copy To Drive" at the top of the notebook so that you can save your results.
+- Review the notebook and update code as needed for running on Colab (see comments in the corresponding Notebooks.)
+
+## Local Installation Instructions
 
 ### Install Anaconda
 
@@ -20,9 +28,9 @@ If you're not already familiar with `conda`, you may want to familiarize your se
 To create a new virutal env for this seminar, run the following commands from your conda terminal.
 
 1. Create a new virtual env named 'ml_bias_seminar' with the latest version of Python3:
- 	- `conda create -n sose24_xai_ac python=3.10`
+ 	- `conda create -n wise24_xai_ac python=3.10`
 2. Activate the new virtual env:
-	- `conda activate sose24_xai_ac`
+	- `conda activate wise24_xai_ac`
 3. Install the required Python packages (The requirements.txt will be updated to include all necessary packages for the notebook assignments)
 	- `pip install -r requirements.txt`
 
@@ -63,50 +71,3 @@ To validate your virtual env installation, and make sure you are able to run a s
 
 1. In JupyterLab, open `validate_installation.ipynb`
 2. Follow the instructions in the Notebook
-
-### (Optional) Intro to ML Notebook
-
-As an example, you can also familiarize yourself with the Notebook we will use in our first lecture: `intro_ml.ipynb`
-
-## Notebook 1
-To get started with Notebook 1:
-
-**Note:** these instructions assume you've previously cloned the repository and set up your python environment per the above instructions. If not, return to the beginning of the README and follow the installation instructions.
-
-1. Update your local repository with `git pull`
-2. Activate your conda env (if not already activated): `conda activate sose24_xai_ac`
-3. Update your conda env with the latest python packages: `pip install -r requirements.txt`
-4. Download necessary models from Moodle, section [Jupyter Notebook #1](https://moodle.uni-bielefeld.de/course/view.php?id=4376#section-6).
-    - Extract files to the `models` folder in your local repository
-5. Launch Jupyter Lab: ```jupyter lab```
-6. Test importing tensorflow and other packages from the `requirements.txt` file
-	1. You can also test loading the tensorflow model:
-```python
-# make sure you've downloaded the models from Moodle 
-model_path = '../models/affectnet_model_e=60/affectnet_model'
-
-# load the weights
-model_xai = cnn_model(input_shape=(128, 128, 3), num_classes=8)
-model_xai.load_weights(model_path).expect_partial()
-```
-7. Open the notebook called `notebooks/1. simplification_attribution.ipynb`
-8. Follow the instructions in the notebook
-
-## Notebook 2
-To get started with Notebook 2:
-
-**Note:** these instructions assume you've previously cloned the repository and set up your python environment per the above instructions. If not, return to the beginning of the README and follow the installation instructions.
-
-1. Update your local repository with `git pull`
-2. Activate your conda env (if not already activated): `conda activate sose24_xai_ac`
-3. Update your conda env with the latest python packages: `pip install -r requirements.txt`
-4. Download necessary models from Moodle, section [Jupyter Notebook #2](https://moodle.uni-bielefeld.de/course/view.php?id=4376#section-12).
-    - Extract files to the `models` folder in your local repository
-5. Launch Jupyter Lab: ```jupyter lab```
-6. In this session, I've created two notebooks to make each task easier to manage
-   - Notebook 2 Part 1: `notebooks/2.1 dice_cfs_ser.ipynb`
-   - Notebook 2 Part 1: `notebooks/2.2 shap_attribution_ser.ipynb`
-7. Open each notebook and ensure you can successfully run the imports statements
-   - If not, try recreating your conda environment
-   - Email me for support
-7. Follow the instructions in the notebook to complete the tasks
