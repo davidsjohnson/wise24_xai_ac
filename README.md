@@ -64,10 +64,3 @@ For this seminar, we will use [JupyterLab](https://jupyterlab.readthedocs.io/en/
 	- Go to the "Launcher" tab and click the Python icon in the "Notebook" section
 3. To open an existing notebook
 	- In the file explorer pane on the left, browse to an `.ipynb` file and doubleclick it
-
-### Validate Your Virtual Environmenmt Installation
-
-To validate your virtual env installation, and make sure you are able to run a simple notebook
-
-1. In JupyterLab, open `validate_installation.ipynb`
-2. Follow the instructions in the Notebook
