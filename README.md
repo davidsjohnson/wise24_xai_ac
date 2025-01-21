@@ -71,3 +71,5 @@ To validate your virtual env installation, and make sure you are able to run a s
 
 1. In JupyterLab, open `validate_installation.ipynb`
 2. Follow the instructions in the Notebook
+
+test
