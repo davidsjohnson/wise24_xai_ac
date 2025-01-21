@@ -3,10 +3,10 @@ jupyter
 matplotlib
 numpy<2
 pandas
-scikit-learn
+scikit-learn==1.5.2
 seaborn
 scikit-image
-xgboost
+xgboost==2.0.3
 librosa
 torch
 torchvision

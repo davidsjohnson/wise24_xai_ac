@@ -35,12 +35,22 @@ def display_one_image(image, title, subplot=(1, 1, 1), xlabel=None, ylabel=None,
         ax.patch.set_edgecolor('red')
         ax.patch.set_linewidth(5) 
     
-def display_nine_images(images, titles, preds, start, title_colors=None):
+def display_nine_images(images, labels, preds, start, title_colors=None):
+    '''Display 9 images with their labels and predictions
+    Args:
+        images (np.array): the images to display
+        labels (np.array): the true labels for the images
+        preds (np.array): the predicted labels for the images
+        start (int): the index of the first image to display
+        title_colors (list): a list of colors for the titles
+    '''
     plt.figure(figsize=(13,13))
     for i in range(9):
         color = 'black' if title_colors is None else title_colors[i]
         idx = start+i
-        display_one_image(images[idx], f'Actual={titles[idx]} \n Pred={preds[idx]} \n Index = {idx}', (3, 3, i+1))
+        pred = CLASS_LABELS[preds[idx]]
+        true = CLASS_LABELS[labels[idx]]
+        display_one_image(images[idx], f'Actual={true} \n Pred={pred} \n Index = {idx}', (3, 3, i+1))
     # plt.tight_layout()
     plt.subplots_adjust(wspace=0.1, hspace=0.4)
     plt.show()
