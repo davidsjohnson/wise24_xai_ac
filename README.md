@@ -1,5 +1,5 @@
 # Explainable AI for Affective Computing
-##### SoSe2024 Bielefeld University
+##### WiSe24/25 - Bielefeld University
 
 In this seminar we will learn about the latest research in eXplainable AI (XAI) and its application for the field of affective computing.  This reposity will contain a series of [Jupyter Notebooks](https://jupyter.org/) to give you practical experience in implementing state-of-the-art explainablity techniques using various Python packages.
 
