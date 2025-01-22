@@ -11,4 +11,3 @@ librosa
 torch
 torchvision
 requests
-opensmile
