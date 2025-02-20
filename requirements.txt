@@ -11,3 +11,4 @@ librosa
 torch
 torchvision
 requests
+shap
